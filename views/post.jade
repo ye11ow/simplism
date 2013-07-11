@@ -1,0 +1,14 @@
+.post(created-at=created_at)
+    .post-title
+        =post_title
+    hr
+    .post-meta
+        span.post-meta-date
+            img(src="images/date.png").post-meta-img
+            =local_date
+        span.post-meta-tags
+            img(src="images/tags.png").post-meta-img
+            =tags
+    .post-body
+        !=post_body
+.clear-both

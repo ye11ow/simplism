@@ -1,0 +1,148 @@
+* {
+  	padding: 0px;
+  	margin: 0px;
+}
+
+hr {
+	margin: 5px;
+	height: 1px;
+}
+
+clear-both {
+	clear: both;
+}
+
+#container {
+	min-height: 100%;
+	height: 100%;
+	width: 100%;
+}
+
+	#left {
+		position: fixed;
+		width: 25%;
+		height: 100%;
+		color: white;
+		background-color: #3594cb;
+	}
+
+		.blog-title {
+			color: #FAFAFA;
+			margin-top: 40px;
+			margin-left: 20px;
+			height: 30px;
+			width: 100%;
+			font-size: 18px;
+		}
+
+		.blog-tags {
+			margin-top: 15px;
+			text-align: right;
+			color: #FFA537;
+			font-size: 16px;
+			height: 25px;
+			width: 90%;
+		}
+
+		.blog-intro {
+			font-size: 18px;
+			line-height: 40px;
+			margin-left: 40px;
+			width: 80%;
+			color: whitesmoke;
+			margin-top: 100px;
+		}
+
+		.nav {
+			position: absolute;
+			right: 0px;
+			bottom: 50px;
+		}
+
+			.nav ul li {
+				padding-top: 10px;
+				margin-top: 30px;
+				text-align: center;
+				list-style-type: none;
+				font-size: 20px;
+				font-weight: bold;
+				width: 140px;
+				height: 35px;
+				color: #444;
+				background-color: #447998;
+
+			}
+				.nav ul li.active {
+					color: black;
+					background-color: #F5F5F5;
+				}
+
+				.nav ul li:hover {
+					color: black;
+					background-color: #F5F5F5;
+				}
+
+		.footnote {
+			color: #4E549E;
+			position: absolute;
+			bottom: 10px;
+			width: 100%;
+			text-align: center;
+		}
+#main {
+	position: absolute;
+	right: 0px;
+	width: 75%;
+	background-color: #F5F5F5;
+	min-height: 100%;
+	height: 100%;
+}
+
+#loader {
+	z-index: 99;
+	left: 30%;
+	bottom: 0px;
+	position: fixed;
+	width: 32px;
+	height: 32px;
+	display: none;
+}
+
+	#content {
+		width: 100%;
+		height: 100%;
+	}
+
+		.post {
+			background-color: #F5F5F5;
+			position: relative;
+			height: 500px;
+			min-height: 500px;
+			width: 100%
+		}
+
+			.post-meta {
+				position: absolute;
+				right: 20px;
+				color: #222;
+			}
+				.post-meta-img {
+					margin-left: 10px;
+					height: 16px;
+					width: 16px;
+				}
+
+			.post-title {
+				margin-left: 10%;
+				color: #9F5050;
+				font: 36px bold;
+				height: 40px;
+				width: 90%;
+			}
+			.post-body {
+				widtH: 70%;
+				margin-top: 20px;
+				margin-left: 10%;
+			}
+
+
