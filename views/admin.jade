@@ -1,5 +1,11 @@
 #container
-    h1 Login
-    #login
-        #username
-        #password
+	h1 Login
+	form(action="login", method="POST")#login
+		div#username
+			span username
+			input(type="text", name="username")
+		div#password
+			span password
+			input(type="password", name="password")
+		div#control
+			input(type="submit")

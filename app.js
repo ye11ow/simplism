@@ -15,6 +15,7 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
+app.use(express.session({ secret:"string"}));
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -23,8 +24,22 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+function restrict(req, res, next) {
+	if (req.session.role && req.session.role == "admin") {
+		next();
+	} else {
+    	req.session.error = 'Access denied!';
+    	res.redirect('/admin/');
+  	}
+}
+
+
+
 app.get('/', routes.index);
 app.get('/admin/', admin.index);
+app.post('/admin/login', admin.login);
+app.get('/admin/logout', admin.logout);
+app.get('/admin/dashboard', restrict, admin.dashboard);
 app.get('/posts/generate', post.generate);
 app.get('/posts/regenerate', post.reGenerate);
 app.get('/ajax/posts/loadnext/:created_at', post.loadNext);
