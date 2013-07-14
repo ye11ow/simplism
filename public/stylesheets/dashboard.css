@@ -1,0 +1,73 @@
+* {
+  	padding: 0px;
+  	margin: 0px;
+}
+
+#container {
+	min-height: 100%;
+	height: 100%;
+	width: 100%;
+}
+
+#left {
+	background-color: #F2F2EA;
+	position: fixed;
+	width: 25%;
+	height: 100%;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #D4D5D0;
+	z-index: 5;
+}
+	#nav {
+		background-color: #F2F2EA;
+		position: fixed;
+		width: 100px;
+		height: 100%;
+		border-right-style: solid;
+		border-right-width: 1px;
+		border-right-color: #D4D5D0;
+		z-index: 10;
+	}
+		.nav-item {
+			text-align: center;
+			vertical-align: middle;
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+			border-bottom-color: #D4D5D0;
+			width: 100px;
+			height: 100px;
+		}
+
+		#post-list {
+			margin-left: 100px;
+			height: 100%;
+		}
+
+			.post-item {
+				text-align: center;
+				vertical-align: middle;
+				border-bottom-style: solid;
+				border-bottom-width: 1px;
+				border-bottom-color: #D4D5D0;
+				height: 100px;
+			}
+
+#main {
+	background-color: #F2F2F0;
+	position: absolute;
+	right: 0px;
+	width: 74%;
+	min-height: 100%;
+	height: 100%;
+	padding-left: 1%;
+}
+
+	#post-main {
+		height: 100%;
+		width: 74%;
+	}
+		#epiceditor {
+			height: 500px;
+			width: 74%;
+		}

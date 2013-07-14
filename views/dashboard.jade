@@ -1,0 +1,25 @@
+doctype 5
+html
+	head
+		title Simplism - Dashboard
+	script(src='/javascripts/jquery-1.10.1.min.js')
+	script(src='/javascripts/epiceditor.min.js')
+	script(src='/javascripts/dashboard.js')
+	link(rel='stylesheet', href='/stylesheets/dashboard.css')
+	link(rel='stylesheet', href='/stylesheets/bootstrap.min.css', media='screen')
+	body
+		#container
+			#left
+				#nav
+					.nav-item Home
+					.nav-item Posts
+
+				#post-list
+					- for (post in post_list) {
+					- 	post = post_list[post];
+						.post-item(data-datetime="#{post.datetime}") 
+							=post.title
+					- }
+			#main
+				#post-main
+					#epiceditor
