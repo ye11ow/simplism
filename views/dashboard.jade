@@ -11,8 +11,8 @@ html
 		#container
 			#left
 				#nav
-					.nav-item Home
-					.nav-item Posts
+					.nav-item#home-nav Home
+					.nav-item#post-nav Posts
 
 				#post-list
 					- for (post in post_list) {
@@ -21,5 +21,23 @@ html
 							=post.title
 					- }
 			#main
+				#home-main
+					.input-prepend.blog-title
+						span.add-on Blog Title&nbsp;
+						input(type="text")#blog-title
+					br
+					.input-prepend.blog-tags
+						span.add-on Blog Tags
+						input(type="text")#blog-tags
+					
+
 				#post-main
+					.input-prepend.post-title
+						span.add-on Title&nbsp;
+						input(type="text")#post-title
+					br
+					.input-prepend.post-tags
+						span.add-on Tags
+						input(type="text")#post-tags
+					br
 					#epiceditor

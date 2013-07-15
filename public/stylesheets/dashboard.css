@@ -39,9 +39,15 @@
 			height: 100px;
 		}
 
+		#home-list {
+			margin-left: 100px;
+			height: 100%;
+		}
+
 		#post-list {
 			margin-left: 100px;
 			height: 100%;
+			display: none;
 		}
 
 			.post-item {
@@ -63,11 +69,27 @@
 	padding-left: 1%;
 }
 
-	#post-main {
+	#home-main {
 		height: 100%;
 		width: 74%;
 	}
+	
+
+	#post-main {
+		height: 100%;
+		width: 74%;
+		display: none;
+	}
+		.post-title {
+			margin-top: 30px;
+		}
+
+		.post-tags {
+			margin-top: 50px;
+		}
+
 		#epiceditor {
+			position: absolute;
 			height: 500px;
 			width: 74%;
 		}

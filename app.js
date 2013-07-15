@@ -1,6 +1,7 @@
 var express = require('express')
   , routes = require('./routes')
   , post = require('./routes/post')
+  , blog = require('./routes/blog')
   , admin = require('./routes/admin')
   , http = require('http')
   , path = require('path');
@@ -44,6 +45,7 @@ app.get('/admin/dashboard', admin.dashboard);
 app.get('/admin/getPost/:datetime', admin.getPost);
 app.get('/posts/generate', post.generate);
 app.get('/posts/regenerate', post.reGenerate);
+app.get('/blog/settings', blog.getBlogSettings);
 app.get('/ajax/posts/loadnext/:created_at', post.loadNext);
 
 http.createServer(app).listen(app.get('port'), function(){
