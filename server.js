@@ -43,8 +43,6 @@ app.post('/admin/login', admin.login);
 app.get('/admin/logout', admin.logout);
 app.get('/admin/dashboard', admin.dashboard);
 app.get('/admin/getPost/:datetime', admin.getPost);
-app.get('/posts/generate', post.generate);
-app.get('/posts/regenerate', post.reGenerate);
 app.get('/blog/settings', blog.getBlogSettings);
 app.get('/ajax/posts/loadnext/:created_at', post.loadNext);
 

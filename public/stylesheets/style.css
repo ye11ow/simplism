@@ -1,9 +1,12 @@
 * {
   	padding: 0px;
   	margin: 0px;
+  	font-family: Courier New;
 }
 
 hr {
+	background-color:#C4C5C7;
+	box-shadow:1px 1px 1px 1px #C4C5C7 inset;
 	margin: 5px;
 	height: 1px;
 }
@@ -23,7 +26,7 @@ clear-both {
 		width: 25%;
 		height: 100%;
 		color: white;
-		background-color: #3594cb;
+		background-image: url(../images/left-noisy.png);
 	}
 
 		.blog-title {
@@ -39,7 +42,7 @@ clear-both {
 			margin-top: 15px;
 			text-align: right;
 			color: #FFA537;
-			font-size: 16px;
+			font-size: 12px;
 			height: 25px;
 			width: 90%;
 		}
@@ -60,26 +63,36 @@ clear-both {
 		}
 
 			.nav ul li {
-				padding-top: 10px;
-				margin-top: 30px;
+				padding-top: 15px;
+				padding-bottom:5px;
 				text-align: center;
 				list-style-type: none;
 				font-size: 20px;
 				font-weight: bold;
+				border-left: 5px solid #333B48;
 				width: 140px;
 				height: 35px;
-				color: #444;
-				background-color: #447998;
+				color: #DDD;
+				background-color: #333B48;
+				cursor: pointer;
 
 			}
 				.nav ul li.active {
+					-webkit-box-shadow: -3px 0px 5px rgba(50, 50, 50, 0.5);
+					-moz-box-shadow:    -3px 0px 5px rgba(50, 50, 50, 0.5);
+					box-shadow:         -3px 0px 5px rgba(50, 50, 50, 0.5);
+					border-left: 5px solid #333B48;
 					color: black;
-					background-color: #F5F5F5;
+					background-image: url(../images/noisy.png);
 				}
 
 				.nav ul li:hover {
 					color: black;
-					background-color: #F5F5F5;
+					background-image: url(../images/noisy.png);
+					border-left: 5px solid #333B48;
+					-webkit-box-shadow: -3px 0px 5px rgba(50, 50, 50, 0.5);
+					-moz-box-shadow:    -3px 0px 5px rgba(50, 50, 50, 0.5);
+					box-shadow:         -3px 0px 5px rgba(50, 50, 50, 0.5);
 				}
 
 		.footnote {
@@ -93,7 +106,7 @@ clear-both {
 	position: absolute;
 	right: 0px;
 	width: 75%;
-	background-color: #F5F5F5;
+	background-repeat: repeat;
 	min-height: 100%;
 	height: 100%;
 }
@@ -111,20 +124,28 @@ clear-both {
 	#content {
 		width: 100%;
 		height: 100%;
+		background-image: url(../images/noisy.png);
+		padding-top: 25px;
 	}
 
 		.post {
-			background-color: #F5F5F5;
 			position: relative;
 			height: 500px;
 			min-height: 500px;
-			width: 100%
+			width: 100%;
+			background-image: url(../images/noisy.png);
 		}
 
 			.post-meta {
 				position: absolute;
 				right: 20px;
-				color: #222;
+				color: #A08946;
+				font-weight: bold;
+				border: 1px solid #C09F3D;
+				background-color:#FFD351;
+				padding-bottom: 2px;
+				padding-right: 5px;
+				border-radius: 3px;
 			}
 				.post-meta-img {
 					margin-left: 10px;
@@ -134,13 +155,14 @@ clear-both {
 
 			.post-title {
 				margin-left: 10%;
-				color: #9F5050;
-				font: 36px bold;
+				color: #186092;
+				font-size: 36px;
+				font-weight: 900;
 				height: 40px;
 				width: 90%;
 			}
 			.post-body {
-				widtH: 70%;
+				width: 70%;
 				margin-top: 20px;
 				margin-left: 10%;
 			}

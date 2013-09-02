@@ -1,16 +1,4 @@
-var generator = require("../libs/post_generator.js"),
-	loader = require("../libs/post_loader.js");
-
-exports.generate = function(req, res){
-	var result = generator.generate();
-	var result = generator.generateIndex();
-	res.send(result);
-};
-
-exports.reGenerate = function(req, res) {
-	var result = generator.reGenerate();
-	res.send(result);
-}
+var loader = require("../libs/post_loader.js");
 
 exports.loadNext = function(req, res) {
 	var created_at = req.params.created_at;
