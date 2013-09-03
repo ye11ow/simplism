@@ -25,6 +25,7 @@ exports.logout = function(req, res){
 
 exports.dashboard = function(req, res){
 	var post_list = post_controller.getPostList(2013);
+	post_controller.savePost("2013545", "321", "fds");
 	res.render('dashboard', {
 		post_list: post_list
 	});

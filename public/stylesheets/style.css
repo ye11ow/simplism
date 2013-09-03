@@ -130,8 +130,8 @@ clear-both {
 
 		.post {
 			position: relative;
-			height: 500px;
-			min-height: 500px;
+			padding-bottom: 50px;
+			min-height: 300px;
 			width: 100%;
 			background-image: url(../images/noisy.png);
 		}
@@ -139,32 +139,29 @@ clear-both {
 			.post-meta {
 				position: absolute;
 				right: 20px;
-				color: #A08946;
 				font-weight: bold;
-				border: 1px solid #C09F3D;
-				background-color:#FFD351;
 				padding-bottom: 2px;
 				padding-right: 5px;
-				border-radius: 3px;
+				color: #AAA;
 			}
 				.post-meta-img {
-					margin-left: 10px;
+					margin-right: 10px;
 					height: 16px;
 					width: 16px;
 				}
 
 			.post-title {
-				margin-left: 10%;
+				margin-left: 5%;
 				color: #186092;
 				font-size: 36px;
+				line-height: 50px;
 				font-weight: 900;
-				height: 40px;
 				width: 90%;
 			}
 			.post-body {
 				width: 70%;
 				margin-top: 20px;
-				margin-left: 10%;
+				margin-left: 5%;
 			}
 
 

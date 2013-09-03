@@ -29,8 +29,8 @@ function loadpost(current) {
 		if (data["endofposts"] == true) {
 			endofposts = true;
 		} else {
-			$("#content").append(data["html"]);
 		}
+		$("#content").append(data["html"]);
 		ajax_lock = false;
 	});
 }

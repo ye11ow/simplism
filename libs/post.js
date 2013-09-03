@@ -45,8 +45,12 @@ var _getPost = function(datetime) {
 
 var _savePost = function(datetime, meta, content) {
 	var year = datetime.substring(0, 4);
+	filename = datetime.replace(/:/g, "_");
+	fs.writeFileSync( "_posts/" + year + "/" + filename + ".md", content);
+	fs.writeFileSync( "_posts/" + year + "/" + filename + ".json", meta);
 }
 
 
 exports.getPostList = _getPostList;
 exports.getPost = _getPost;
+exports.savePost = _savePost;

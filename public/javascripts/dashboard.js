@@ -42,24 +42,30 @@ function loadBlogSettings() {
 
 $(document).ready(function() {
 	loadBlogSettings();
-	$(".post-item").click(function(){
+	$(".post-item").click( function(){
 		loadPost($(this).attr("data-datetime"));
 	});
 
-	$("#home-nav").click(function(){
+	$("#home-nav").click( function(){
 		loadBlogSettings();
 		$("#post-main").hide();
 		$("#post-list").hide();
 		$("#home-main").show();
 	});
 
-	$("#post-nav").click(function(){
+	$("#post-nav").click( function(){
 		$("#home-main").hide();
 		$("#post-main").show();
 		$("#post-list").show();
 		editor = new EpicEditor(opts);
 		editor.load();
+		$("#save-post").click( function(){
+			var title = $("#post-title").val();
+			var tags = $("#post-tags").val();
+			var content = editor.getElement('editor').body.innerHTML;
+		});
 	});
+
 });
 
 

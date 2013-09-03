@@ -3,6 +3,11 @@ var fs = require("fs"),
 	jade = require('jade'),
 	BLOG = require("../configs/blog.json");
 
+
+/*  
+ *  public: Load next N posts (older than current date) from file system.
+ *  @current: date string
+ */
 var _loadNext = function(current) {
 	var load_count = BLOG["load_count"],
 		folder = "",
@@ -22,24 +27,24 @@ var _loadNext = function(current) {
 	}
 	while (load_count > 0 && YEAR > 0) {
 		folder = "_posts/" + year;
-		if (fs.existsSync(folder)) {
+		if ( fs.existsSync(folder) ) {
 			var file,
-				i = 0,					
+				i = 0,
 				files = fs.readdirSync(folder),
 				META,
 				created_at,
 				local_date,
 				metafile,
 				post_body = "";
-			for (i = files.length - 1;i >=0 && load_count > 0;i--) {
+
+			for ( i = files.length - 1;i >=0 && load_count > 0;i-- ) {
 				if (files[i].lastIndexOf("md") == files[i].length - 2 && files[i] < olderthan) {
-					console.log(files[i] + "<" + olderthan + ": " + (files[i] < olderthan) );
 					metafile = files[i].substring(0, files[i].length - 2) + "json",
 					META = require("../" + folder + "/" + metafile);
 
 					created_at = new Date(META["created_at"]);
 					local_date = created_at.toLocaleDateString();
-					local_date = local_date.substring(local_date.indexOf(",") + 1, local_date.length);
+					local_date = local_date.substring(local_date.indexOf(",") + 2, local_date.length);
 					
 					load_count--;
 					post_body = fs.readFileSync(folder + "/" + files[i]);
@@ -58,10 +63,12 @@ var _loadNext = function(current) {
 					}
 				}
 			}
+		} else {
+			YEAR--;
 		}
 		year--;
-		YEAR--;
 	}
+
 	response = {
 		"html": html,
 		"oldest_post": oldest_post
